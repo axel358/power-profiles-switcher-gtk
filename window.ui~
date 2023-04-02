@@ -200,13 +200,14 @@
             <property name="visible">True</property>
             <property name="can-focus">False</property>
             <child>
-              <object class="GtkComboBoxText">
+              <object class="GtkComboBoxText" id="profiles_combobox">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
+                <property name="active">0</property>
                 <items>
-                  <item translatable="yes">Power Saver</item>
-                  <item translatable="yes">Balanced</item>
-                  <item translatable="yes">Performance</item>
+                  <item id="power-saver" translatable="yes">Power Saver</item>
+                  <item id="balanced" translatable="yes">Balanced</item>
+                  <item id="performance" translatable="yes">Performance</item>
                 </items>
               </object>
               <packing>
@@ -216,7 +217,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkEntry">
+              <object class="GtkEntry" id="command_entry">
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
               </object>
@@ -232,6 +233,7 @@
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_launch_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>

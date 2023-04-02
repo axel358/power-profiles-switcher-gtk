@@ -20,6 +20,8 @@ class PowerProfilesSwitcher(Gtk.Application):
         self.balanced_button = self.builder.get_object('balanced_button')
         self.performance_button = self.builder.get_object('performance_button')
         self.performance_button.set_sensitive(self.supports_performance_profile())
+        self.profiles_combobox = self.builder.get_object('profiles_combobox')
+        self.command_entry = self.builder.get_object('command_entry')
 
         active_profile = self.get_active_profile()
 
@@ -40,9 +42,19 @@ class PowerProfilesSwitcher(Gtk.Application):
 
         self.window.show_all()
 
+    def on_launch_clicked(self, button):
+        self.run_with_profile(self.command_entry.get_text(), self.profiles_combobox.get_active_id())
+
     def run_cmd(self, args: list):
         try:
             subprocess.run(args)
+            return True
+        except (subprocess.CalledProcessError, FileNotFoundError):
+            return False
+
+    def run_with_profile(self, command: str, profile: str):
+        try:
+            subprocess.Popen('powerprofilesctl launch --profile ' + profile + ' ' + command, shell=True)
             return True
         except (subprocess.CalledProcessError, FileNotFoundError):
             return False

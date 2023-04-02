@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import sys
 import gi
-import os
 import subprocess
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
@@ -83,7 +82,7 @@ class PowerProfilesSwitcher(Gtk.Application):
         dialog.props.copyright = 'GPL-3'
         dialog.props.logo_icon_name = 'cu.axel.PowerProfiles'
         dialog.props.comments = 'Control Power Profiles'
-        dialog.props.website = 'https://github.com/axel358'
+        dialog.props.website = 'https://github.com/axel358/power-profiles-switcher-gtk'
         dialog.set_transient_for(self.window)
         dialog.show()
 

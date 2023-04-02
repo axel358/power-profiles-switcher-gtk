@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/lib/power-profiles-switcher/power-profiles-switcher.py "$@"

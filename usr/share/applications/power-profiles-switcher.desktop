@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Power Profiles
+Comment=Switch between power profiles
+Exec=power-profiles-switcher
+Icon=cu.axel.PowerProfiles
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=GTK;Utility;Core;
+Keywords=power;profiles,battery,performance;
+StartupNotify=false

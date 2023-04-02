@@ -1,0 +1,9 @@
+Package: power-profiles-switcher
+Version: 0.1
+Architecture: all
+Maintainer: Axel358 <axel358@yahoo.com>
+Installed-Size: 46
+Depends: python3, python3-gi, power-profiles-daemon
+Section: custom
+Priority: optional
+Description: Switch between power profiles

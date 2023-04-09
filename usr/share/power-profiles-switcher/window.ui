@@ -207,7 +207,6 @@
                 <items>
                   <item id="power-saver" translatable="yes">Power Saver</item>
                   <item id="balanced" translatable="yes">Balanced</item>
-                  <item id="performance" translatable="yes">Performance</item>
                 </items>
               </object>
               <packing>

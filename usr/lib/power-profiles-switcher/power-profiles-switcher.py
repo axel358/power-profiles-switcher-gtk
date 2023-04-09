@@ -28,6 +28,7 @@ class PowerProfilesSwitcher(Gtk.Application):
         if self.supports_performance_profile():
             self.performance_button.set_active('performance' in active_profile)
             self.performance_button.connect('toggled', self.set_active_profile, 'performance')
+            self.profiles_combobox.append('performance', 'Performance')
         else:
             self.performance_button.destroy()
 

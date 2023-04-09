@@ -18,18 +18,22 @@ class PowerProfilesSwitcher(Gtk.Application):
         self.ps_button = self.builder.get_object('ps_button')
         self.balanced_button = self.builder.get_object('balanced_button')
         self.performance_button = self.builder.get_object('performance_button')
-        self.performance_button.set_sensitive(self.supports_performance_profile())
         self.profiles_combobox = self.builder.get_object('profiles_combobox')
         self.command_entry = self.builder.get_object('command_entry')
 
         active_profile = self.get_active_profile()
 
         self.balanced_button.set_active('balanced' in active_profile)
-        self.performance_button.set_active('performance' in active_profile)
+
+        if self.supports_performance_profile():
+            self.performance_button.set_active('performance' in active_profile)
+            self.performance_button.connect('toggled', self.set_active_profile, 'performance')
+        else:
+            self.performance_button.destroy()
 
         self.ps_button.connect('toggled', self.set_active_profile, 'power-saver')
         self.balanced_button.connect('toggled', self.set_active_profile, 'balanced')
-        self.performance_button.connect('toggled', self.set_active_profile, 'performance')
+
 
         self.builder.connect_signals(self)
         self.window = None

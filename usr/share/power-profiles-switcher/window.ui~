@@ -220,7 +220,6 @@
               <object class="GtkEntry" id="command_entry">
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
-                <property name="placeholder-text" translatable="yes">command</property>
               </object>
               <packing>
                 <property name="expand">True</property>

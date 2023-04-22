@@ -1,7 +1,7 @@
 cdbb8d6b8fe6d7bcd390809f91b579bc  usr/bin/power-profiles-switcher
 1ffa6234c7bc076600670f28a62980c8  usr/lib/power-profiles-switcher/power-profiles-switcher.py
 f32a340ef0ea0eac01f194e2b627bb40  usr/share/applications/power-profiles-switcher.desktop
-f3e21474ceb53a97d9caab240a0a38a1  usr/share/doc/power-profiles-switcher/changelog.gz
+7ecd0c39f80972f64b6f89c609430ca9  usr/share/doc/power-profiles-switcher/changelog.gz
 b8c2323551520d39fb91eabf6da6427b  usr/share/doc/power-profiles-switcher/copyright
 cf134546b521e6edbc5496ba669369e8  usr/share/icons/hicolor/scalable/apps/cu.axel.PowerProfiles.svg
 d93b0da064d98c40026d449cf7b3b04b  usr/share/power-profiles-switcher/icons/hicolor/scalable/actions/balanced-symbolic.svg

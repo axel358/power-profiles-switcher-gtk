@@ -1,5 +1,5 @@
-power-profiles-switcher (0.1) UNRELEASED; urgency=medium
+power-profiles-switcher (0.2) UNRELEASED; urgency=medium
 
-  * Initial release.
+  * Only show performance option when is supported
 
- -- Axel <axel358@yahoo.com>  Sun, 02 Apr 2023 16:12:51 -0400
+ -- Axel <axel358@yahoo.com>  Sat, 22 Apr 2023 18:28:53 -0400

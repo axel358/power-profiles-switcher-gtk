@@ -82,7 +82,7 @@ class PowerProfilesSwitcher(Gtk.Application):
     def show_about_dialog(self, button):
         dialog = Gtk.AboutDialog()
         dialog.props.program_name = 'Power Profiles'
-        dialog.props.version = "0.1.0"
+        dialog.props.version = "0.2.0"
         dialog.props.authors = ['Axel358']
         dialog.props.copyright = 'GPL-3'
         dialog.props.logo_icon_name = 'cu.axel.PowerProfiles'
